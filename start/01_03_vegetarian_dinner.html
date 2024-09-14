@@ -35,6 +35,18 @@
     ]
     // Write your code here
 
+    function vegeMenu(menu){
+      const menuNode = document.querySelector("#menu")
+      const vegeOptions = menu.filter(item=>item.isVegetarian === true)
+      vegeOptions.forEach(opt=>{
+        let dish = document.createElement("li")
+        dish.textContent = opt.name
+        menuNode.append(dish)
+      })
+    }
+
+    vegeMenu(menu)
+
   </script>
 </body>
 
